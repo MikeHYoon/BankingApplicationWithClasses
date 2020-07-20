@@ -1,5 +1,5 @@
 # BankingApplicationWithClasses
-Continuation of the AdvancedBankingApplication, created a Bank class to hold all the Banking related methods.
+Continuation of my AdvancedBankingApplication project, created a Bank class to hold all the Banking related methods.
 
 Created in Java. Please see my BankingApplication and AdvancedBankingApplication repositories for functionality information.
 
