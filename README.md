@@ -15,7 +15,7 @@ Functionalities include:
 2. Withdraw
 3. Check current balance
 
-7/26/2020
+(7/26/2020) -
 Freatures and Functionalities added: 
 1. Transfer money
 2. 3rd bank account (Transfer) added.
