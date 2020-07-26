@@ -69,14 +69,16 @@ public class Bank {
             Scanner scanner5 = new Scanner(System.in);
             System.out.print("Please select the account you would like to transfer to (1 for Checkings, 2 for Savings, 3 for Transfer): ");
             int input2 = scanner5.nextInt();
-            if (input2-1 == input) //checks if the account they want to transfer to is the same account they are accessing
+            if(input2<=0 || input2>3) //Returns an error message if the input is invalid
+                System.out.println("Invalid input, please try again.");
+            else if (input2-1 == input) //checks if the account they want to transfer to is the same account they are accessing
                 System.out.println("You cannot transfer money to the same account, please try again.");
             else if (input2 == 1) {
                 Scanner scanner6 = new Scanner(System.in);
                 System.out.print("Please enter the amount you would like to transfer to your Checkings account (Example format: 17.55 = $17.55): ");
                 double input3 = scanner6.nextDouble();
-                if(input3 > balance[input]){ //checks if the requested transfer amount is greater than the balance
-                    System.out.println("You do not have enough to transfer this amount, please try again.");
+                if(input3 > balance[input] || input3 <= 0.0){ //checks if the requested transfer amount is greater than the balance
+                    System.out.println("You either do not have enough to transfer this amount or entered an invalid amount, please try again.");
                 }
                 else { //amount is removed the accessed account and increased in the requested account
                     balance[input] = balance[input] - input3;
@@ -87,8 +89,8 @@ public class Bank {
                 Scanner scanner6 = new Scanner(System.in);
                 System.out.print("Please enter the amount you would like to transfer to your Savings account (Example format: 17.55 = $17.55): ");
                 double input3 = scanner6.nextDouble();
-                if(input3 > balance[input]){
-                    System.out.println("You do not have enough to transfer this amount, please try again.");
+                if(input3 > balance[input] || input3 <= 0.0){
+                    System.out.println("You either do not have enough to transfer this amount or entered an invalid amount, please try again.");
                 }
                 else {
                     balance[input] = balance[input] - input3;
@@ -99,8 +101,8 @@ public class Bank {
                 Scanner scanner6 = new Scanner(System.in);
                 System.out.print("Please enter the amount you would like to transfer to your Transfer account (Example format: 17.55 = $17.55): ");
                 double input3 = scanner6.nextDouble();
-                if(input3 > balance[input]){
-                    System.out.println("You do not have enough to transfer this amount, please try again.");
+                if(input3 > balance[input] || input3 <= 0.0){
+                    System.out.println("You either do not have enough to transfer this amount or entered an invalid amount, please try again.");
                 }
                 else {
                     balance[input] = balance[input] - input3;
