@@ -11,6 +11,7 @@ Functionalities include:
 3. Check current balance
 
 7/26/2020
-Functionality added: Transfer money
-3rd bank account (Transfer) added.
-Transfer accounts can only be transferred to and form or view its balance (Cannot deposit or withdraw).
+Functionality added: 
+1. Transfer money
+2. 3rd bank account (Transfer) added.
+3. Transfer accounts can only be transferred to and form or view its balance (Cannot deposit or withdraw).
